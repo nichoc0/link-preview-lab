@@ -1,0 +1,22 @@
+<!doctype html><html><head>
+<meta charset="utf-8"><title>JS execution probe</title>
+<meta property="og:title" content="JS execution probe">
+<meta property="og:description" content="js exec test">
+<meta property="og:image" content="https://webhook.site/9d770bbd-c32e-451a-8f68-33484af976c4/js-static-ogimage-marker.png">
+</head><body><h1>JS execution probe</h1>
+<script>
+(function(){
+  try {
+    var i = new Image();
+    i.src = "https://webhook.site/9d770bbd-c32e-451a-8f68-33484af976c4/js-executed-beacon-marker.png?t=" + Date.now();
+  } catch(e) {}
+  try {
+    fetch("https://webhook.site/9d770bbd-c32e-451a-8f68-33484af976c4/js-executed-fetch-marker", {mode:"no-cors"});
+  } catch(e) {}
+  try {
+    var m = document.querySelector('meta[property="og:image"]');
+    if (m) { m.setAttribute('content', 'https://webhook.site/9d770bbd-c32e-451a-8f68-33484af976c4/js-dom-mutated-ogimage-marker.png'); }
+  } catch(e) {}
+})();
+</script>
+</body></html>
